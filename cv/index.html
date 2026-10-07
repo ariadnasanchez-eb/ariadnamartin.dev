@@ -104,7 +104,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
 /* Footer */
 .foot { background: var(--plum); color: rgba(255, 255, 255, 0.85); }
 .foot .in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-block: 28px; font-size: 0.9rem; }
-.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--mustard); color: var(--plum); border: 0; font: inherit; font-weight: 600; font-size: 0.95rem; padding: 12px 22px; border-radius: 8px; cursor: pointer; transition: background .2s ease, transform .15s ease; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--mustard); color: var(--plum); border: 0; font: inherit; font-weight: 600; font-size: 0.95rem; padding: 12px 22px; border-radius: 8px; cursor: pointer; text-decoration: none; transition: background .2s ease, transform .15s ease; }
 .btn:hover { background: #F4C55E; transform: translateY(-1px); }
 
 /* Playful touches: sticky notes and doodles in the home page's hand-drawn style (screen only) */
@@ -445,7 +445,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
 <footer class="foot">
   <div class="in">
     <p class="next"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="3" fill="#EDB63E" stroke="#FFFFFF" stroke-width="2.5" transform="rotate(-6 24 24)"/><path d="M17 25 l5 5 l10 -12" fill="none" stroke="#2C2130" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Next card on my board: your team. Shared privately, please ask before forwarding.</p>
-    <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+    <a class="btn" href="/cv/Ariadna-Martin-Sanchez-CV.pdf" download>Download PDF</a>
   </div>
 </footer>
 
