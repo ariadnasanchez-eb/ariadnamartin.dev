@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ariadna Martin · Delivery Health Check for growing engineering teams</title>
+<meta name="description" content="Engineering Manager and Agile Delivery lead with 16+ years in tech. A free 45-minute Delivery Health Check to find where your engineering team's delivery gets stuck.">
+<link rel="canonical" href="https://ariadnamartin.dev/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ariadnamartin.dev/">
+<meta property="og:title" content="Is your engineering team growing faster than your way of working?">
+<meta property="og:description" content="A free 45-minute Delivery Health Check with Ariadna Martin, Engineering Manager and Agile Delivery lead.">
+<meta property="og:image" content="https://ariadnamartin.dev/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2E5D6E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Ariadna Martin · Delivery Health Check","url":"https://ariadnamartin.dev/","image":"https://ariadnamartin.dev/assets/og-image.jpg","email":"hello@ariadnamartin.dev","areaServed":"Europe","founder":{"@type":"Person","name":"Ariadna Martín Sánchez","jobTitle":"Engineering Manager & Agile Delivery Lead","sameAs":["https://www.linkedin.com/in/ariadnamartinsanchez/"]}}
+</script>
+<style>
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 300; font-display: swap; src: url("assets/fonts/poppins-300.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 500; font-display: swap; src: url("assets/fonts/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("assets/fonts/poppins-600.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("assets/fonts/poppins-700.woff2") format("woff2"); }
+/* Layout: solid colour tiles and blocks with hand-drawn objects from a team's working day. Deliberately single-theme: the colour world is the brand. */
+:root {
+  --white: #FFFFFF;
+  --ink: #23262B;
+  --soft-ink: #4B5058;
+  --lilac: #9C8BCB;
+  --sage: #8DBAAE;
+  --mist: #D3DEE1;
+  --plum: #2C2130;
+  --petrol: #2E5D6E;
+  --petrol-deep: #234A58;
+  --thread: #C93D2E;
+  --mustard: #EDB63E;
+  --paper: #F6F4F1;
+  --font: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--white); color: var(--ink); font-family: var(--font); font-size: 1.02rem; line-height: 1.65; padding-inline: 0; padding-block: 0; }
+::selection { background: var(--mustard); color: var(--ink); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+.in { max-width: 1160px; margin: 0 auto; padding-inline: 24px; }
+
+.skip { position: absolute; left: 16px; top: -60px; background: var(--plum); color: var(--white); padding: 10px 16px; border-radius: 8px; z-index: 10; text-decoration: none; }
+.skip:focus { top: 12px; }
+
+/* Header */
+.top { background: var(--white); }
+.top .in { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 104px; }
+.logo { display: inline-flex; align-items: center; gap: 14px; text-decoration: none; line-height: 1.2; }
+.logo .lt { display: flex; flex-direction: column; }
+.logo .lt span { font-weight: 400; letter-spacing: 0.28em; font-size: 1.05rem; color: var(--plum); text-transform: uppercase; }
+.logo svg { width: 40px; height: 40px; flex: none; }
+.nav { display: flex; align-items: center; gap: 34px; font-weight: 500; font-size: 0.98rem; }
+.nav a { text-decoration: none; color: var(--petrol); }
+.nav a:hover { color: var(--thread); }
+.nav .cta { background: var(--thread); color: var(--white); padding: 10px 18px; border-radius: 8px; }
+.nav .cta:hover { background: var(--plum); color: var(--white); }
+
+/* Tiles */
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tile { min-height: 300px; padding: 40px 28px 0; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; text-decoration: none; overflow: hidden; position: relative; }
+.tile h2 { font-size: clamp(1.15rem, 1.7vw, 1.45rem); font-weight: 600; line-height: 1.3; }
+.tile .u { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.tile svg { flex: none; transition: transform .35s ease; }
+.tile:hover svg { transform: translateY(-4px) rotate(-3deg); }
+.t1 { background: #7A68B5; color: var(--white); }
+.t2 { background: #46786C; color: var(--white); }
+.t3 { background: var(--mist); color: var(--petrol); }
+.t4 { background: var(--plum); color: var(--white); justify-content: center; padding-bottom: 32px; }
+.t3 svg { margin-top: 8px; }
+
+/* Hello */
+.hello { background: var(--petrol); color: var(--white); }
+.hello .in { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr); gap: 64px; align-items: center; padding-block: 72px; }
+.blob { position: relative; width: 100%; max-width: 400px; aspect-ratio: 4 / 5; justify-self: center; margin: 0 18px 18px 0; }
+.blob::before { content: ""; position: absolute; inset: 0; transform: translate(18px, 18px); background: var(--mustard); border-radius: 14px; }
+.blob img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; border-radius: 14px; transition: transform .35s ease; }
+.blob:hover img { transform: translate(6px, 6px); }
+.hello h1 { font-weight: 300; font-size: clamp(2.2rem, 4.4vw, 3.3rem); line-height: 1.1; margin-bottom: 26px; }
+.hello h1 b { font-weight: 500; }
+.hello .claim { font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.35; margin-bottom: 24px; max-width: 30ch; }
+.hello p + p { margin-top: 14px; }
+.hello .body { max-width: 56ch; color: rgba(255, 255, 255, 0.9); }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--mustard); color: var(--plum); text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 8px; transition: transform .15s ease, background .2s ease; }
+.btn:hover { background: #F4C55E; transform: translateY(-1px); }
+.btn svg { width: 16px; height: 16px; }
+.hello .actions { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.hello .note { font-size: 0.9rem; color: rgba(255, 255, 255, 0.78); }
+
+/* Health Check */
+.hc { padding-block: 96px; }
+.sec-title { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 600; line-height: 1.15; color: var(--plum); margin-bottom: 16px; }
+.sec-lead { max-width: 60ch; color: var(--soft-ink); font-size: 1.08rem; }
+.areas { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 44px; }
+.area { border-radius: 14px; padding: 24px 20px 26px; min-width: 0; }
+.area h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.3; margin-bottom: 10px; }
+.area p { font-size: 0.92rem; line-height: 1.55; }
+.a1 { background: #F7DCD7; color: #6E2219; }
+.a2 { background: #DCEBE7; color: #24524A; }
+.a3 { background: #FBEBC6; color: #6A4A06; }
+.a4 { background: #E5DFF3; color: #43357A; }
+.a5 { background: #DCE6EA; color: #234A58; }
+.how { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 64px; margin-top: 80px; align-items: start; }
+.how h3 { font-size: 1.45rem; font-weight: 600; color: var(--plum); margin-bottom: 14px; }
+.gets { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.gets li { display: flex; gap: 12px; align-items: flex-start; }
+.gets svg { width: 22px; height: 22px; flex: none; margin-top: 2px; }
+.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; gap: 22px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 18px; align-items: start; }
+.steps li::before { content: counter(s); width: 48px; height: 48px; border-radius: 50%; background: var(--petrol); color: var(--white); display: grid; place-items: center; font-weight: 600; font-size: 1.1rem; }
+.steps b { display: block; font-weight: 600; color: var(--plum); }
+.steps span { color: var(--soft-ink); font-size: 0.97rem; }
+
+/* Record */
+.record { background: var(--paper); padding-block: 96px; }
+.record .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 64px; align-items: start; }
+.facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.facts li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; align-items: center; padding: 16px 0; border-bottom: 2px dotted #D9D3CC; }
+.facts li:first-child { padding-top: 0; }
+.facts svg { width: 34px; height: 34px; }
+.facts b { font-weight: 600; color: var(--plum); }
+
+/* Name */
+.name { background: var(--plum); color: var(--white); }
+.name .in { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); gap: 56px; align-items: center; padding-block: 88px; }
+.name h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 600; margin-bottom: 20px; }
+.name p { color: rgba(255, 255, 255, 0.86); max-width: 58ch; }
+.name p + p { margin-top: 14px; }
+.reasons { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 26px; max-width: 60ch; counter-reset: r; }
+.reasons li { counter-increment: r; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; color: rgba(255, 255, 255, 0.86); }
+.reasons li::before { content: counter(r); width: 44px; height: 44px; border-radius: 50%; background: var(--mustard); color: var(--plum); display: grid; place-items: center; font-weight: 700; font-size: 1.1rem; }
+.reasons b { display: block; color: var(--white); font-weight: 600; font-size: 1.12rem; margin-bottom: 4px; }
+.principles { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 14px; max-width: 56ch; }
+.principles li { color: rgba(255, 255, 255, 0.86); padding-left: 22px; position: relative; }
+.principles li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 10px; height: 10px; border-radius: 2px; background: var(--mustard); }
+.principles b { color: var(--white); font-weight: 600; }
+.name blockquote { margin: 0; padding-left: 20px; border-left: 3px solid var(--mustard); font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 500; line-height: 1.4; color: var(--white); }
+.name .yarn { justify-self: center; width: 100%; max-width: 300px; }
+
+/* FAQ */
+.faq { padding-block: 96px; }
+.qa { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 56px; margin-top: 36px; }
+.qa h3 { font-size: 1.08rem; font-weight: 600; color: var(--petrol); margin-bottom: 6px; }
+.qa p { color: var(--soft-ink); }
+
+/* Band */
+.band { background: var(--mustard); }
+.band .in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding-block: 56px; }
+.band h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; color: var(--plum); max-width: 22ch; line-height: 1.2; }
+.band .alt { margin-top: 10px; color: var(--plum); font-weight: 500; }
+.band .alt a { text-underline-offset: 3px; user-select: all; }
+.band .btn { background: var(--plum); color: var(--white); }
+.band .btn:hover { background: var(--petrol); }
+
+/* Footer */
+footer { background: var(--petrol-deep); color: rgba(255, 255, 255, 0.86); font-size: 0.95rem; }
+footer .cols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding-block: 64px 44px; }
+footer .brand { font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; color: var(--white); font-size: 1rem; line-height: 1.3; margin-bottom: 14px; }
+footer .tagline { max-width: 36ch; }
+footer .mail { margin-top: 14px; font-weight: 500; color: var(--white); user-select: all; }
+footer h2.fh { margin: 0 0 14px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mustard); }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+footer a { text-decoration: none; }
+footer a:hover { color: var(--mustard); }
+footer .links { margin-top: 18px; display: flex; gap: 18px; }
+footer .links a { text-decoration: underline; text-underline-offset: 4px; }
+footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 20px 28px; font-size: 0.86rem; color: rgba(255, 255, 255, 0.7); }
+
+@media (max-width: 1000px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile { min-height: 250px; }
+  .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .areas .a5 { grid-column: span 2; }
+}
+@media (max-width: 820px) {
+  .top .in { flex-wrap: wrap; min-height: 0; padding-block: 22px; }
+  .nav { gap: 20px; flex-wrap: wrap; }
+  .hello .in, .how, .record .grid, .name .in { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .blob { max-width: 300px; }
+  .name .yarn { max-width: 200px; }
+  .qa { grid-template-columns: minmax(0, 1fr); }
+  footer .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  footer .cols > div:first-child { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .in { padding-inline: 16px; }
+  .nav a:not(.cta) { display: none; }
+  .tiles { grid-template-columns: minmax(0, 1fr); }
+  .tile { min-height: 0; padding: 32px 20px; }
+  .areas { grid-template-columns: minmax(0, 1fr); }
+  .areas .a5 { grid-column: auto; }
+  .hc, .record, .faq { padding-block: 72px; }
+  footer .cols { grid-template-columns: minmax(0, 1fr); }
+  footer .cols > div:first-child { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .tile svg, .btn, .blob img { transition: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<header class="top">
+  <div class="in">
+    <a class="logo" href="#top" aria-label="Ariadna Martin, home">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="3" y="6" width="17" height="17" rx="2" fill="#9C8BCB" transform="rotate(-6 11 14)"/><rect x="23" y="4" width="17" height="17" rx="2" fill="#EDB63E" transform="rotate(5 31 12)"/><rect x="12" y="24" width="17" height="17" rx="2" fill="#8DBAAE" transform="rotate(-3 20 32)"/></svg>
+      <span class="lt"><span>Ariadna</span><span>Martin</span></span>
+    </a>
+    <nav class="nav" aria-label="Page">
+      <a href="#health-check">Health Check</a>
+      <a href="#about">About</a>
+      <a href="#questions">Questions</a>
+      <a class="cta" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="tiles">
+    <a class="tile t1" href="#health-check">
+      <h2 class="u">Growing faster than your way of working?</h2>
+      <svg width="130" height="110" viewBox="0 0 130 110" aria-hidden="true">
+        <path d="M18 46 C 16 22, 44 10, 66 12 C 94 14, 114 28, 110 50 C 107 70, 82 78, 58 76 C 44 75, 30 70, 22 62 C 18 58, 18 52, 18 46 Z" fill="#8FC7BB" stroke="#2C2130" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M30 56 C 42 66, 70 70, 94 60" fill="none" stroke="#6FAFA1" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="78" cy="88" r="7" fill="#8FC7BB" stroke="#2C2130" stroke-width="2.5"/>
+        <circle cx="94" cy="99" r="4.5" fill="#8FC7BB" stroke="#2C2130" stroke-width="2.2"/>
+        <circle cx="105" cy="105" r="2.8" fill="#8FC7BB" stroke="#2C2130" stroke-width="2"/>
+      </svg>
+    </a>
+    <a class="tile t2" href="#health-check">
+      <svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
+        <rect x="26" y="20" width="68" height="88" rx="8" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/>
+        <rect x="44" y="12" width="32" height="16" rx="5" fill="#EDB63E" stroke="#2C2130" stroke-width="2.5"/>
+        <path d="M38 48 l6 6 l11 -12" fill="none" stroke="#2E5D6E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M62 48 H 82" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M38 70 l6 6 l11 -12" fill="none" stroke="#2E5D6E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M62 70 H 82" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="46" cy="92" r="6" fill="none" stroke="#C93D2E" stroke-width="3"/>
+        <path d="M62 92 H 76" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <h2 class="u">A free 45-minute Delivery Health Check</h2>
+    </a>
+    <a class="tile t3" href="#health-check">
+      <h2>Get work flowing again</h2>
+      <svg width="200" height="130" viewBox="0 0 200 130" aria-hidden="true">
+        <rect x="6" y="6" width="188" height="118" rx="8" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/>
+        <path d="M69 18 V 112 M 131 18 V 112" stroke="#D3DEE1" stroke-width="2"/>
+        <rect x="18" y="20" width="38" height="34" rx="3" fill="#F7DCD7" stroke="#2C2130" stroke-width="2" transform="rotate(-4 37 37)"/>
+        <rect x="20" y="64" width="38" height="34" rx="3" fill="#FBEBC6" stroke="#2C2130" stroke-width="2" transform="rotate(3 39 81)"/>
+        <rect x="81" y="24" width="38" height="34" rx="3" fill="#E5DFF3" stroke="#2C2130" stroke-width="2" transform="rotate(2 100 41)"/>
+        <rect x="143" y="20" width="38" height="34" rx="3" fill="#DCEBE7" stroke="#2C2130" stroke-width="2" transform="rotate(-3 162 37)"/>
+        <rect x="145" y="66" width="38" height="34" rx="3" fill="#DCEBE7" stroke="#2C2130" stroke-width="2" transform="rotate(4 164 83)"/>
+        <path d="M152 37 l5 5 l9 -10 M154 83 l5 5 l9 -10" fill="none" stroke="#2E5D6E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M88 90 C 104 84, 116 88, 128 82" fill="none" stroke="#C93D2E" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/>
+        <path d="M122 76 L 130 82 L 121 87" fill="none" stroke="#C93D2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a class="tile t4" href="#about">
+      <svg width="116" height="116" viewBox="0 0 116 116" aria-hidden="true">
+        <circle cx="58" cy="58" r="50" fill="#FFFFFF" stroke="#8DBAAE" stroke-width="3"/>
+        <circle cx="58" cy="58" r="40" fill="none" stroke="#D3DEE1" stroke-width="2"/>
+        <path d="M58 12 V 20 M 58 96 V 104 M 12 58 H 20 M 96 58 H 104" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M58 24 L 67 58 L 58 58 Z" fill="#C93D2E"/><path d="M58 24 L 49 58 L 58 58 Z" fill="#E46A57"/>
+        <path d="M58 92 L 49 58 L 58 58 Z" fill="#2E5D6E"/><path d="M58 92 L 67 58 L 58 58 Z" fill="#8DBAAE"/>
+        <circle cx="58" cy="58" r="5" fill="#EDB63E" stroke="#2C2130" stroke-width="2"/>
+      </svg>
+      <h2 class="u">Know what matters most</h2>
+    </a>
+  </div>
+
+  <section class="hello">
+    <div class="in">
+      <div class="blob">
+        <img src="assets/portrait.jpg" loading="eager" decoding="async" alt="Ariadna Martin" width="640" height="800">
+      </div>
+      <div>
+        <h1>Hi, I'm <b>Ariadna</b></h1>
+        <p class="claim">Engineering Manager and Agile Delivery lead, helping growing teams make delivery predictable again.</p>
+        <div class="body">
+          <p>I've spent 16+ years in tech, most recently as an Engineering Manager at Eventbrite. I've led engineering teams, helped scale a tech organisation from around 40 to 70+ people, and worked on technology strategy three to five years out.</p>
+          <p>When a team grows, the way it works often doesn't grow with it. Commitments slip, priorities blur, and Product and Engineering drift apart. I help you find where delivery gets stuck, and get it moving again.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a free Health Check
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <span class="note">45 minutes, online, in English or Spanish</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hc" id="health-check">
+    <div class="in">
+      <h2 class="sec-title">The Delivery Health Check</h2>
+      <p class="sec-lead">A 45-minute conversation about how your team really works, followed by a short written report. I look at five areas, the ones that usually start to creak first when a team grows.</p>
+      <div class="areas">
+        <div class="area a1"><h3>Delivery predictability</h3><p>Do commitments hold? Where does work wait?</p></div>
+        <div class="area a2"><h3>Product–Engineering alignment</h3><p>Does the team know why it builds what it builds?</p></div>
+        <div class="area a3"><h3>Prioritisation</h3><p>Is there one clear priority, or is everything urgent?</p></div>
+        <div class="area a4"><h3>Team effectiveness</h3><p>Can the team decide without escalating everything?</p></div>
+        <div class="area a5"><h3>Process &amp; metrics</h3><p>Are metrics used to learn? Do retros change anything?</p></div>
+      </div>
+      <div class="how">
+        <div>
+          <h3>What you get</h3>
+          <ul class="gets">
+            <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#DCEBE7"/><path d="M6.5 11.5 9.5 14.5 15.5 8" fill="none" stroke="#24524A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>A score from 1 to 10 for each area</li>
+            <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#DCEBE7"/><path d="M6.5 11.5 9.5 14.5 15.5 8" fill="none" stroke="#24524A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>What's working, so you protect it</li>
+            <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#DCEBE7"/><path d="M6.5 11.5 9.5 14.5 15.5 8" fill="none" stroke="#24524A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The main risks slowing you down</li>
+            <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#DCEBE7"/><path d="M6.5 11.5 9.5 14.5 15.5 8" fill="none" stroke="#24524A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Three concrete recommendations to start with</li>
+          </ul>
+        </div>
+        <div>
+          <h3>How it works</h3>
+          <ol class="steps">
+            <li><div><b>Pick a time</b><span>Book a slot that suits you in my calendar.</span></div></li>
+            <li><div><b>Fill in a short questionnaire</b><span>About ten minutes. A teammate can share their view too.</span></div></li>
+            <li><div><b>We talk for 45 minutes</b><span>About how work really flows, with recent examples.</span></div></li>
+            <li><div><b>You get your report</b><span>Within three working days, plus a short call to go through it.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="record" id="about">
+    <div class="in grid">
+      <div>
+        <h2 class="sec-title">I've been on the inside of the team</h2>
+        <p class="sec-lead">I've worked at team and organisation level, connecting business strategy, people, process and technology. So I don't arrive with a framework to install. I look at how your team actually works and help fix the part that's slowing it down.</p>
+      </div>
+      <ul class="facts">
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#F7DCD7"/><path d="M9 21 C 13 13, 19 25, 25 13" fill="none" stroke="#C93D2E" stroke-width="2.4" stroke-linecap="round"/></svg><span>Helped scale a tech organisation from <b>around 40 to 70+ people</b></span></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#DCEBE7"/><path d="M9 21 C 13 13, 19 25, 25 13" fill="none" stroke="#24524A" stroke-width="2.4" stroke-linecap="round"/></svg><span>Cut cycle time by <b>30%</b> and made delivery more predictable</span></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#FBEBC6"/><path d="M9 21 C 13 13, 19 25, 25 13" fill="none" stroke="#956400" stroke-width="2.4" stroke-linecap="round"/></svg><span>Reduced recurring defects by <b>about 25%</b> through quality and testing changes</span></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#E5DFF3"/><path d="M9 21 C 13 13, 19 25, 25 13" fill="none" stroke="#43357A" stroke-width="2.4" stroke-linecap="round"/></svg><span>Led teams through hiring, growth and promotion with <b>100% retention over two years</b></span></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#DCE6EA"/><path d="M9 21 C 13 13, 19 25, 25 13" fill="none" stroke="#234A58" stroke-width="2.4" stroke-linecap="round"/></svg><span>Worked on digital products with <b>50M+ monthly impressions</b></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="name" id="how-i-work">
+    <div class="in">
+      <div>
+        <h2>Three reasons the change sticks</h2>
+        <ol class="reasons">
+          <li><div><b>People and system, together.</b> In my experience, most delivery problems are half process, half people: unclear ownership, decisions that wait for one person, managers stretched too thin. I've managed teams, not just processes, so I work on both sides at once.</div></li>
+          <li><div><b>Your team owns it.</b> Less process for the sake of process. We agree a few concrete changes with the people doing the work, instead of installing a framework from outside.</div></li>
+          <li><div><b>It's measured.</b> We take a baseline before we start, cycle time, predictability, unplanned work, and look at it again at the end. You see whether it worked, not just whether it felt better.</div></li>
+        </ol>
+      </div>
+      <svg class="yarn" viewBox="0 0 200 220" aria-hidden="true">
+        <rect x="10" y="10" width="76" height="76" rx="6" fill="#9C8BCB" transform="rotate(-6 48 48)"/>
+        <rect x="104" y="22" width="76" height="76" rx="6" fill="#EDB63E" transform="rotate(5 142 60)"/>
+        <rect x="30" y="112" width="76" height="76" rx="6" fill="#8DBAAE" transform="rotate(3 68 150)"/>
+        <rect x="118" y="124" width="76" height="76" rx="6" fill="#F7DCD7" transform="rotate(-4 156 162)"/>
+        <path d="M26 44 h40 M26 56 h28" stroke="#2C2130" stroke-width="3" stroke-linecap="round" transform="rotate(-6 48 48)"/>
+        <path d="M120 56 h40 M120 68 h24" stroke="#2C2130" stroke-width="3" stroke-linecap="round" transform="rotate(5 142 60)"/>
+        <path d="M46 150 h40 M46 162 h26" stroke="#2C2130" stroke-width="3" stroke-linecap="round" transform="rotate(3 68 150)"/>
+        <path d="M134 158 h40 M134 170 h30" stroke="#9F2F2D" stroke-width="3" stroke-linecap="round" transform="rotate(-4 156 162)"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="faq" id="questions">
+    <div class="in">
+      <h2 class="sec-title">Questions</h2>
+      <div class="qa">
+        <div><h3>Is it really free?</h3><p>Yes. The call and the written report cost nothing, and there's no obligation afterwards.</p></div>
+        <div><h3>What happens after?</h3><p>You may well be able to run with the recommendations yourselves. If you want to go deeper, there's a 2–3 day Delivery Diagnostic with your real data and team interviews, then a four-week Delivery Improvement Sprint, or ongoing help as a Fractional Delivery Lead.</p></div>
+        <div><h3>We're a larger organisation. Does it still work?</h3><p>Yes. I focus the Health Check on one area or group of teams so the recommendations stay concrete.</p></div>
+        <div><h3>Can I just send you a question?</h3><p>Of course. Write to <a href="mailto:hello@ariadnamartin.dev">hello@ariadnamartin.dev</a> and I'll reply within two working days.</p></div>
+        <div><h3>Is what I share confidential?</h3><p>Yes. Nothing you share is used or published without your permission.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="in">
+      <div>
+        <h2>Find out where your delivery gets stuck.</h2>
+        <p class="alt">Prefer email? Write to <a href="mailto:hello@ariadnamartin.dev">hello@ariadnamartin.dev</a></p>
+      </div>
+      <a class="btn" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a free Health Check
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="in cols">
+    <div>
+      <p class="brand">Ariadna<br>Martin</p>
+      <p class="tagline">Delivery, Agile and engineering leadership support for growing tech teams.</p>
+      <p class="mail"><a href="mailto:hello@ariadnamartin.dev">hello@ariadnamartin.dev</a></p>
+      <p class="links"><a href="https://www.linkedin.com/in/ariadnamartinsanchez/" target="_blank" rel="noopener">LinkedIn</a><a href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Calendly</a></p>
+    </div>
+    <div>
+      <h2 class="fh">Services</h2>
+      <ul>
+        <li><a href="#health-check">Delivery Health Check (free)</a></li>
+        <li>Delivery Diagnostic</li>
+        <li>Delivery Improvement Sprint</li>
+        <li>Fractional Delivery Lead</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="fh">More</h2>
+      <ul>
+        <li><a href="#about">About Ariadna</a></li>
+        <li><a href="#how-i-work">How I work</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="in legal">© 2026 Ariadna Martín Sánchez · Remote from Spain, working with teams across Europe · <a href="legal.html">Privacy &amp; legal notice</a></div>
+</footer>
+</body>
+</html>
