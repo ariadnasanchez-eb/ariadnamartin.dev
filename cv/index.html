@@ -186,7 +186,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
   .js .board .reveal.shown .tags li { animation: drop .5s cubic-bezier(.2, .9, .3, 1.2) both; }
   .js .board .tags li:nth-child(2) { animation-delay: .06s; } .js .board .tags li:nth-child(3) { animation-delay: .12s; }
   .js .board .tags li:nth-child(4) { animation-delay: .18s; } .js .board .tags li:nth-child(5) { animation-delay: .24s; }
-  .js .board .tags li:nth-child(6) { animation-delay: .30s; }
+  .js .board .tags li:nth-child(6) { animation-delay: .30s; } .js .board .tags li:nth-child(7) { animation-delay: .36s; }
   .js .ways li.shown svg { animation: wiggle .7s ease .3s; }
 }
 
@@ -254,7 +254,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
   .reveal { opacity: 1 !important; transform: none !important; }
   .timeline::before { left: 5px; }
   .timeline::after { display: none !important; }
-  .photo, .hero h1, .role, .chips li, .job::before { animation: none !important; }
+  *, *::before, *::after { animation: none !important; }
   .job { padding-left: 24px; break-inside: auto; }
   .job h3, .job .co, .when { break-after: avoid; }
   .impact { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
@@ -344,6 +344,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
             <li>Reduced team cycle time by 30% through stronger planning, prioritisation, ownership and engineering practices.</li>
             <li>Introduced P0 end-to-end testing and a regression-prevention approach, reducing recurring defects by ~25%.</li>
             <li>Automated CI/CD workflows, strengthened service-health monitoring and alerting, and established testing strategies, ADRs and technical proposals.</li>
+            <li>Drove AI adoption across my teams: Codex for bug fixing and test writing, knowledge-transfer sessions to make it a daily habit, a first-pass AI review on pull requests, and Claude and ChatGPT in my own day-to-day management work.</li>
             <li>Led post-purchase initiatives that increased automated refund requests by 105% within five months.</li>
             <li>Scaled advertising across web and native discovery surfaces with KPIs and A/B testing, reaching 50M+ monthly impressions.</li>
             <li>Expanded engineering onboarding to cover 90% of Spain's 100-person engineering organisation, and extended it to India as that site grew from 50 to 100 engineers.</li>
@@ -412,7 +413,7 @@ h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.1
         </div>
         <div class="reveal">
           <h3>Delivery &amp; tech</h3>
-          <ul class="tags"><li>Scrum</li><li>Agile delivery</li><li>OKRs &amp; KPIs</li><li>CI/CD</li><li>Engineering quality</li><li>Backend engineering</li></ul>
+          <ul class="tags"><li>Scrum</li><li>Agile delivery</li><li>OKRs &amp; KPIs</li><li>CI/CD</li><li>Engineering quality</li><li>AI: Claude, ChatGPT, Codex</li><li>Backend engineering</li></ul>
         </div>
         <div class="reveal">
           <h3>Product &amp; strategy</h3>
