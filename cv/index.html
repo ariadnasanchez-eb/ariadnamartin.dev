@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Unlisted page: shared by link only. Kept out of search engines, the sitemap and the site navigation. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>CV · Ariadna Martín Sánchez</title>
+<meta name="description" content="CV of Ariadna Martín Sánchez, Engineering Manager and Agile Delivery Lead.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#2E5D6E">
+<style>
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 300; font-display: swap; src: url("/assets/fonts/poppins-300.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/poppins-600.woff2") format("woff2"); }
+/* Same colour world as the home page, calmer layout: this page is read by recruiters and printed to PDF. */
+:root {
+  --white: #FFFFFF;
+  --ink: #23262B;
+  --soft-ink: #4B5058;
+  --plum: #2C2130;
+  --petrol: #2E5D6E;
+  --mustard: #EDB63E;
+  --thread: #C93D2E;
+  --paper: #F6F4F1;
+  --rule: #D9D3CC;
+  --font: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 0.98rem; line-height: 1.6; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, p, ul { margin: 0; }
+.skip { position: absolute; left: 16px; top: -60px; background: var(--plum); color: var(--white); padding: 10px 16px; border-radius: 8px; z-index: 10; text-decoration: none; }
+.skip:focus { top: 12px; }
+
+.sheet { max-width: 880px; margin: 40px auto; background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: 0 1px 3px rgba(44, 33, 48, 0.08); }
+
+/* Header */
+.head { background: var(--petrol); color: var(--white); padding: 44px 52px 40px; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 32px; align-items: center; }
+.head img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: 50% 30%; border: 4px solid var(--mustard); display: block; }
+.head h1 { font-weight: 300; font-size: clamp(1.9rem, 4vw, 2.5rem); line-height: 1.1; margin-bottom: 8px; }
+.head h1 b { font-weight: 600; }
+.head .role { font-weight: 500; font-size: 1.1rem; color: var(--mustard); margin-bottom: 14px; }
+.contact { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 0.92rem; color: rgba(255, 255, 255, 0.9); }
+.contact a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255, 255, 255, 0.45); }
+.contact a:hover { text-decoration-color: var(--mustard); }
+
+/* Body */
+main { padding: 44px 52px 48px; }
+section + section { margin-top: 40px; }
+h2 { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--petrol); padding-bottom: 10px; margin-bottom: 20px; border-bottom: 2px solid var(--mustard); }
+.summary p { font-size: 1.04rem; max-width: 68ch; }
+.summary p + p { margin-top: 12px; }
+
+.impact { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.impact li { background: var(--paper); border-radius: 10px; padding: 16px 18px; font-size: 0.94rem; line-height: 1.5; }
+.impact b { display: block; font-size: 1.35rem; font-weight: 600; color: var(--plum); line-height: 1.2; margin-bottom: 2px; }
+
+.job + .job { margin-top: 28px; padding-top: 28px; border-top: 2px dotted var(--rule); }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 16px; margin-bottom: 4px; }
+.job h3 { font-size: 1.08rem; font-weight: 600; color: var(--plum); line-height: 1.35; }
+.job h3 span { font-weight: 400; color: var(--soft-ink); }
+.when { font-size: 0.88rem; color: var(--soft-ink); white-space: nowrap; }
+.job .lead { color: var(--soft-ink); margin-bottom: 10px; }
+.job ul { padding-left: 20px; }
+.job li { margin-top: 6px; }
+.job li::marker { color: var(--thread); }
+
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 28px; }
+.skills h3 { font-size: 0.95rem; font-weight: 600; color: var(--plum); margin-bottom: 6px; }
+.skills p { font-size: 0.92rem; color: var(--soft-ink); }
+
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 52px; background: var(--paper); font-size: 0.88rem; color: var(--soft-ink); }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--mustard); color: var(--plum); border: 0; font: inherit; font-weight: 600; font-size: 0.95rem; padding: 12px 20px; border-radius: 8px; cursor: pointer; text-decoration: none; }
+.btn:hover { background: #F4C55E; }
+
+@media (max-width: 720px) {
+  .sheet { margin: 0; border-radius: 0; }
+  .head { grid-template-columns: 1fr; gap: 20px; padding: 32px 20px; text-align: left; }
+  .head img { width: 96px; height: 96px; }
+  main { padding: 32px 20px 36px; }
+  .impact, .skills { grid-template-columns: 1fr; }
+  .foot { padding: 20px; }
+}
+
+/* Print / Save as PDF: two A4 pages, no screen chrome. */
+@page { size: A4; margin: 14mm 14mm 16mm; }
+@media print {
+  body { background: var(--white); font-size: 9.6pt; line-height: 1.5; }
+  .sheet { margin: 0; max-width: none; border-radius: 0; box-shadow: none; }
+  .head { padding: 0 0 18px; background: none; color: var(--ink); border-bottom: 2px solid var(--petrol); grid-template-columns: 84px minmax(0, 1fr); gap: 22px; }
+  .head img { width: 84px; height: 84px; border-width: 3px; }
+  .head .role { color: var(--petrol); }
+  .contact { color: var(--soft-ink); }
+  .contact a { text-decoration: none; }
+  main { padding: 20px 0 0; }
+  section + section { margin-top: 20px; }
+  h2 { margin-bottom: 12px; padding-bottom: 6px; }
+  .impact { gap: 8px; }
+  .impact li { padding: 10px 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .impact b { font-size: 13pt; }
+  .job { break-inside: avoid; }
+  .job + .job { margin-top: 16px; padding-top: 16px; }
+  .foot, .skip { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#cv">Skip to the CV</a>
+<div class="sheet">
+  <header class="head">
+    <img src="/assets/portrait.jpg" alt="Ariadna Martín Sánchez" width="640" height="800">
+    <div>
+      <h1><b>Ariadna</b> Martín Sánchez</h1>
+      <p class="role">Engineering Manager · Agile Delivery Lead</p>
+      <ul class="contact">
+        <li>Spain · Remote (CET)</li>
+        <li><a href="mailto:hello@ariadnamartin.dev">hello@ariadnamartin.dev</a></li>
+        <li><a href="https://www.linkedin.com/in/ariadnamartinsanchez/" target="_blank" rel="noopener">linkedin.com/in/ariadnamartinsanchez</a></li>
+        <li><a href="https://ariadnamartin.dev/">ariadnamartin.dev</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="cv">
+    <section class="summary" aria-labelledby="s-profile">
+      <h2 id="s-profile">Profile</h2>
+      <p>Engineering leader with 16+ years in tech. I started as a back-end developer and grew into engineering management and organisational leadership, most recently as Software Engineering Manager at Eventbrite.</p>
+      <p>I build teams that deliver predictably and want to stay: clear priorities, little work in progress, fast feedback and people who are supported to grow. Looking for remote Engineering Manager, Agile Delivery Lead or Scrum Master roles across Europe.</p>
+    </section>
+
+    <section aria-labelledby="s-impact">
+      <h2 id="s-impact">Selected impact</h2>
+      <ul class="impact">
+        <li><b>4 → 8 engineers</b>Grew my Eventbrite team with 100% retention over two years</li>
+        <li><b>−30% cycle time</b>And a team that reliably delivered what it committed to</li>
+        <li><b>40 → 70 people</b>Scaled the Spain technology organisation at Sunweb Group</li>
+        <li><b>~25% fewer recurring defects</b>Through quality and testing changes</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="s-exp">
+      <h2 id="s-exp">Experience</h2>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Software Engineering Manager <span>· Eventbrite</span></h3>
+          <span class="when">Mar 2023 – Jul 2026 · Remote</span>
+        </div>
+        <p class="lead">Led a remote engineering team building advertising, payments, refunds and post-purchase experiences for a global ticketing marketplace.</p>
+        <ul>
+          <li>Grew the team from 4 to 8 engineers, owning hiring, onboarding, performance management and career development, with 100% retention over two years.</li>
+          <li>Reduced cycle time by 30% and made delivery predictable: shared priorities, limited work in progress, code reviews in under a day, pairing on complex work and dependencies resolved before work started.</li>
+          <li>Led product and engineering initiatives across advertising, payments, refunds and post-purchase, in close partnership with Product and Design.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Head of IT Spain (Head of Engineering) <span>· Sunweb Group</span></h3>
+          <span class="when">Apr 2019 – Mar 2023 · Girona</span>
+        </div>
+        <p class="lead">Led the Spain technology organisation of a European travel company.</p>
+        <ul>
+          <li>Scaled the organisation from 40 to 70 people, shaping its structure, workforce strategy and hiring.</li>
+          <li>Owned the technology budget and the long-term technology roadmap.</li>
+          <li>Led tech employer branding: attracting, onboarding and engaging the department's people.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Solutions Lead <span>· everis (NTT DATA)</span></h3>
+          <span class="when">Nov 2018 – Mar 2019 · Girona</span>
+        </div>
+        <p class="lead">Enterprise &amp; Cloud Solutions (Dynamics CRM). Coordinated technical expertise across development teams and provided the overall architectural direction for client solutions.</p>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Back-end Developer <span>· Sunweb Group</span></h3>
+          <span class="when">2015 – 2018</span>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="s-skills">
+      <h2 id="s-skills">Skills</h2>
+      <div class="skills">
+        <div><h3>Engineering leadership</h3><p>Hiring, coaching, performance and career growth, organisational design, scaling teams</p></div>
+        <div><h3>Agile delivery</h3><p>Scrum, Kanban, flow metrics, WIP limits, continuous improvement</p></div>
+        <div><h3>Product &amp; strategy</h3><p>Product–Engineering alignment, roadmaps, budgets, stakeholder management</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="foot">
+    <span>Shared privately. Please don't forward without asking.</span>
+    <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+  </div>
+</div>
+</body>
+</html>
