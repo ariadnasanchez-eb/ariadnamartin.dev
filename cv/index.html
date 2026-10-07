@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Unlisted page: shared by link only. Kept out of search engines, the sitemap and the site navigation. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>CV · Ariadna Martín Sánchez</title>
+<meta name="description" content="CV of Ariadna Martín Sánchez, Engineering Manager and Agile Delivery Lead.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#2E5D6E">
+<style>
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 300; font-display: swap; src: url("/assets/fonts/poppins-300.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/poppins-600.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/poppins-700.woff2") format("woff2"); }
+/* Same colour world as the home page. On screen it moves a little (counters, timeline reveal); printed it is a calm two-page A4 CV. */
+:root {
+  --white: #FFFFFF;
+  --ink: #23262B;
+  --soft-ink: #4B5058;
+  --plum: #2C2130;
+  --petrol: #2E5D6E;
+  --petrol-deep: #234A58;
+  --mustard: #EDB63E;
+  --thread: #C93D2E;
+  --lilac: #7A68B5;
+  --sage: #46786C;
+  --mist: #D3DEE1;
+  --paper: #F6F4F1;
+  --rule: #D9D3CC;
+  --font: "Poppins", "Avenir Next", "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font); font-size: 0.98rem; line-height: 1.6; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, p, ul { margin: 0; }
+.skip { position: absolute; left: 16px; top: -60px; background: var(--plum); color: var(--white); padding: 10px 16px; border-radius: 8px; z-index: 10; text-decoration: none; }
+.skip:focus { top: 12px; }
+.in { max-width: 1000px; margin: 0 auto; padding-inline: 24px; }
+
+/* Hero */
+.hero { background: var(--petrol); color: var(--white); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; right: -120px; top: -120px; width: 380px; height: 380px; border-radius: 50%; background: var(--petrol-deep); }
+.hero .in { position: relative; z-index: 1; display: grid; grid-template-columns: 180px minmax(0, 1fr) 150px; gap: 44px; align-items: center; padding-block: 64px 56px; }
+.photo { position: relative; width: 180px; aspect-ratio: 4 / 5; margin: 0 12px 12px 0; }
+.photo::before { content: ""; position: absolute; inset: 0; transform: translate(12px, 12px); background: var(--mustard); border-radius: 14px; }
+.photo img { position: relative; width: 100%; height: 100%; border-radius: 14px; object-fit: cover; object-position: 50% 30%; display: block; }
+.hero h1 { font-weight: 300; font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.05; margin-bottom: 12px; }
+.hero h1 b { font-weight: 600; }
+.role { font-weight: 500; font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--mustard); margin-bottom: 16px; }
+.pitch { max-width: 58ch; color: rgba(255, 255, 255, 0.9); margin-bottom: 22px; }
+.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips a, .chips span { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.12); font-size: 0.88rem; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+.chips a:hover { background: var(--mustard); color: var(--plum); transform: translateY(-2px); }
+.chips svg { width: 15px; height: 15px; flex: none; }
+
+/* Sections */
+section { padding-block: 64px; }
+section.alt { background: var(--white); }
+.kicker { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--thread); margin-bottom: 8px; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.1rem); font-weight: 600; line-height: 1.15; color: var(--plum); margin-bottom: 32px; }
+
+/* Impact */
+.impact { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.impact li { border-radius: 14px; padding: 26px 22px 24px; color: var(--white); transition: transform .25s ease; }
+.impact li:hover { transform: translateY(-4px) rotate(-1deg); }
+.impact li:nth-child(1) { background: var(--lilac); }
+.impact li:nth-child(2) { background: var(--sage); }
+.impact li:nth-child(3) { background: var(--plum); }
+.impact li:nth-child(4) { background: var(--thread); }
+.num { display: block; white-space: nowrap; font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 700; line-height: 1; margin-bottom: 10px; font-variant-numeric: tabular-nums; }
+.impact p { font-size: 0.92rem; line-height: 1.45; color: rgba(255, 255, 255, 0.92); }
+
+/* Timeline */
+.timeline { list-style: none; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 11px; top: 8px; bottom: 8px; width: 3px; border-radius: 3px; background: var(--mist); }
+.job { position: relative; padding-left: 52px; }
+.job + .job { margin-top: 36px; }
+.job::before { content: ""; position: absolute; left: 0; top: 6px; width: 25px; height: 25px; border-radius: 50%; background: var(--white); border: 4px solid var(--petrol); }
+.job.now::before { background: var(--mustard); border-color: var(--mustard); box-shadow: 0 0 0 6px rgba(237, 182, 62, 0.25); }
+.when { display: inline-block; font-size: 0.82rem; font-weight: 600; color: var(--petrol); background: var(--mist); border-radius: 999px; padding: 3px 12px; margin-bottom: 8px; }
+.job h3 { font-size: 1.15rem; font-weight: 600; color: var(--plum); line-height: 1.35; }
+.co { font-weight: 500; color: var(--thread); margin-bottom: 8px; }
+.co span { color: var(--soft-ink); font-weight: 400; }
+.job .lead { color: var(--soft-ink); margin-bottom: 8px; max-width: 70ch; }
+.job ul { padding-left: 20px; max-width: 72ch; }
+.job li { margin-top: 6px; }
+.job li::marker { color: var(--mustard); }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.skills h3 { font-size: 1rem; font-weight: 600; color: var(--plum); margin-bottom: 12px; }
+.tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { font-size: 0.86rem; padding: 6px 12px; border-radius: 8px; background: var(--paper); color: var(--ink); transition: background .2s ease, color .2s ease; }
+.tags li:hover { background: var(--petrol); color: var(--white); }
+
+/* Footer */
+.foot { background: var(--plum); color: rgba(255, 255, 255, 0.85); }
+.foot .in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-block: 28px; font-size: 0.9rem; }
+.btn { display: inline-flex; align-items: center; gap: 8px; background: var(--mustard); color: var(--plum); border: 0; font: inherit; font-weight: 600; font-size: 0.95rem; padding: 12px 22px; border-radius: 8px; cursor: pointer; transition: background .2s ease, transform .15s ease; }
+.btn:hover { background: #F4C55E; transform: translateY(-1px); }
+
+/* Playful touches: sticky notes and doodles in the home page's hand-drawn style (screen only) */
+.sticky { position: absolute; z-index: 2; background: #FBEBC6; color: var(--plum); font-weight: 600; font-size: 0.86rem; line-height: 1.3; padding: 12px 14px 14px; width: 150px; border: 2px solid var(--plum); border-radius: 3px; box-shadow: 4px 4px 0 rgba(44, 33, 48, 0.25); transform: rotate(-6deg); transition: transform .3s ease; }
+.sticky:hover { transform: rotate(0deg) scale(1.04); }
+.sticky::before { content: ""; position: absolute; left: 50%; top: -10px; width: 46px; height: 16px; transform: translateX(-50%) rotate(3deg); background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(44, 33, 48, 0.15); }
+.hero .sticky { position: relative; align-self: end; margin-bottom: 8px; transform: rotate(5deg); }
+.hero .sticky:hover { transform: rotate(0deg) scale(1.04); }
+.squiggle { display: block; width: 210px; height: 14px; margin: -2px 0 14px; }
+.title-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.title-row svg { flex: none; margin-bottom: 26px; transition: transform .35s ease; }
+.title-row:hover svg { transform: translateY(-4px) rotate(-4deg); }
+.impact li { border: 2.5px solid var(--plum); box-shadow: 5px 5px 0 var(--plum); }
+.impact li:nth-child(odd) { transform: rotate(-1.2deg); }
+.impact li:nth-child(even) { transform: rotate(1.2deg); }
+.impact li:hover { transform: translateY(-4px) rotate(0deg); }
+.ways { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.ways li { border-radius: 14px; padding: 22px 20px 24px; }
+.ways svg { width: 46px; height: 46px; margin-bottom: 12px; transition: transform .35s ease; }
+.ways li:hover svg { transform: rotate(-8deg) scale(1.08); }
+.ways h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 6px; }
+.ways p { font-size: 0.9rem; line-height: 1.5; }
+.w1 { background: #F7DCD7; color: #6E2219; }
+.w2 { background: #DCEBE7; color: #24524A; }
+.w3 { background: #E5DFF3; color: #43357A; }
+.w4 { background: #FBEBC6; color: #6A4A06; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; background: var(--white); border: 2.5px solid var(--plum); border-radius: 14px; padding: 18px; }
+.board > div { background: var(--paper); border-radius: 10px; padding: 14px 14px 18px; }
+.board h3 { font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--petrol); margin-bottom: 14px; }
+.board .tags { gap: 10px; }
+.board .tags li { border: 2px solid var(--plum); border-radius: 3px; font-weight: 500; transform: rotate(var(--r, -1.5deg)); }
+.board .tags li:nth-child(3n+1) { background: #F7DCD7; --r: -2deg; }
+.board .tags li:nth-child(3n+2) { background: #DCEBE7; --r: 1.5deg; }
+.board .tags li:nth-child(3n+3) { background: #E5DFF3; --r: -1deg; }
+.board .tags li:hover { transform: rotate(0deg) scale(1.06); background: var(--mustard); color: var(--plum); }
+.origin { display: inline-block; margin-top: 6px; font-size: 0.86rem; color: var(--soft-ink); font-style: italic; }
+.next { display: flex; align-items: center; gap: 14px; font-weight: 500; color: var(--white); }
+.next svg { width: 40px; height: 40px; flex: none; }
+
+.bg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.edu { display: flex; gap: 16px; align-items: center; background: var(--paper); border: 2.5px solid var(--plum); border-radius: 14px; padding: 20px; box-shadow: 5px 5px 0 var(--plum); }
+.edu svg { width: 52px; height: 52px; flex: none; }
+.edu h3 { font-size: 1.05rem; font-weight: 600; color: var(--plum); }
+.edu p { color: var(--soft-ink); font-size: 0.92rem; }
+.langs { list-style: none; padding: 0; display: grid; gap: 12px; }
+.langs li { display: grid; grid-template-columns: 72px minmax(0, 1fr) 52px; gap: 12px; align-items: center; font-size: 0.92rem; }
+.langs span { font-weight: 600; color: var(--plum); }
+.langs i { position: relative; height: 10px; border-radius: 999px; background: var(--mist); overflow: hidden; }
+.langs i::after { content: ""; position: absolute; inset: 0; width: var(--lvl); border-radius: 999px; background: var(--petrol); }
+.langs em { font-style: normal; color: var(--soft-ink); font-size: 0.86rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .langs i::after { width: 0; transition: width 1s ease .2s; }
+  .js .langs.shown i::after { width: var(--lvl); }
+}
+
+/* Animations: only with scripting on and motion welcome */
+@keyframes pop { from { opacity: 0; transform: scale(.85) rotate(-4deg); } to { opacity: 1; transform: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes sway { 0%, 100% { transform: rotate(5deg); } 50% { transform: rotate(2deg) translateY(-3px); } }
+@keyframes drop { from { opacity: 0; transform: translateY(-14px) rotate(-8deg); } to { opacity: 1; transform: rotate(var(--r, -1.5deg)); } }
+@keyframes wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-6deg); } 75% { transform: rotate(5deg); } }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(237, 182, 62, .55); } 100% { box-shadow: 0 0 0 14px rgba(237, 182, 62, 0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .js .photo { animation: pop .7s cubic-bezier(.2, .9, .3, 1.3) both; }
+  .js .hero h1 { animation: rise .6s ease .15s both; }
+  .js .squiggle path { stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw .9s ease .55s forwards; }
+  .js .role { animation: rise .6s ease .3s both; }
+  .js .pitch { animation: rise .6s ease .42s both; }
+  .js .chips li { animation: rise .5s ease both; }
+  .js .chips li:nth-child(1) { animation-delay: .55s; } .js .chips li:nth-child(2) { animation-delay: .62s; }
+  .js .chips li:nth-child(3) { animation-delay: .69s; } .js .chips li:nth-child(4) { animation-delay: .76s; }
+  .js .hero .sticky { animation: pop .6s cubic-bezier(.2, .9, .3, 1.3) .9s both, sway 5s ease-in-out 1.6s infinite; }
+  .js .hero .sticky:hover { animation-play-state: paused; }
+  .js .title-row.shown svg { animation: wiggle .8s ease .2s; }
+  .js .timeline::after { content: ""; position: absolute; left: 11px; top: 8px; width: 3px; height: calc(var(--progress, 0) * (100% - 16px)); border-radius: 3px; background: var(--petrol); }
+  .js .job.shown::before { animation: pop .45s cubic-bezier(.2, .9, .3, 1.4) both; }
+  .js .job.now.shown::before { animation: pop .45s cubic-bezier(.2, .9, .3, 1.4) both, ping 1.8s ease-out .5s 3; }
+  .js .board .reveal.shown .tags li { animation: drop .5s cubic-bezier(.2, .9, .3, 1.2) both; }
+  .js .board .tags li:nth-child(2) { animation-delay: .06s; } .js .board .tags li:nth-child(3) { animation-delay: .12s; }
+  .js .board .tags li:nth-child(4) { animation-delay: .18s; } .js .board .tags li:nth-child(5) { animation-delay: .24s; }
+  .js .board .tags li:nth-child(6) { animation-delay: .30s; }
+  .js .ways li.shown svg { animation: wiggle .7s ease .3s; }
+}
+
+/* Reveal on scroll, only when scripting works and motion is welcome */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .js .reveal.shown { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+@media (max-width: 860px) {
+  .impact, .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .board, .bg { grid-template-columns: 1fr; }
+  .hero .in { grid-template-columns: 180px minmax(0, 1fr); }
+  .hero .sticky { position: relative; right: auto; top: auto; grid-column: 1 / -1; justify-self: start; width: auto; transform: rotate(-2deg); }
+  .skills { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 640px) {
+  .in { padding-inline: 16px; }
+  .hero .in { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 40px; }
+  .photo { width: 132px; }
+  section { padding-block: 48px; }
+  .impact, .ways { grid-template-columns: 1fr; }
+  .job { padding-left: 42px; }
+  .title-row svg { display: none; }
+  .hero .sticky { font-size: 0.82rem; }
+}
+
+/* Print / Save as PDF: two A4 pages, no screen chrome or motion. */
+@page { size: A4; margin: 13mm 14mm 15mm; }
+@media print {
+  body { background: var(--white); font-size: 9.4pt; line-height: 1.45; }
+  .in { max-width: none; padding: 0; }
+  .hero { background: none; color: var(--ink); border-bottom: 2px solid var(--petrol); }
+  .hero::after, .photo::before, .pitch, .foot, .skip, .sticky, .squiggle, .title-row svg, .origin, .ways-sec { display: none !important; }
+  .impact li { border-width: 1.5px; box-shadow: none; transform: none !important; }
+  .board { border: 0; padding: 0; gap: 14px; }
+  .board > div { background: none; padding: 0; }
+  .board .tags li { border-width: 1px; transform: none; }
+  .bg { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .edu { box-shadow: none; border-width: 1.5px; padding: 10px 12px; }
+  .edu svg { width: 30px; height: 30px; }
+  .langs { gap: 4px; }
+  .langs i, .langs i::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; width: auto; }
+  .langs i::after { width: var(--lvl) !important; }
+  .job ul { margin-top: 2px; }
+  .job li { margin-top: 2px; }
+  .hero .in { grid-template-columns: 78px minmax(0, 1fr); gap: 20px; padding-block: 0 14px; }
+  .photo { width: 66px; margin: 0; }
+  .photo img { border-radius: 8px; }
+  .hero h1 { font-size: 22pt; margin-bottom: 4px; }
+  .role { color: var(--petrol); margin-bottom: 8px; font-size: 11pt; }
+  .chips { gap: 4px 16px; }
+  .chips a, .chips span { padding: 0; background: none; color: var(--soft-ink); font-size: 8.6pt; }
+  section, section.alt { padding-block: 14px 0; background: none; }
+  .kicker { display: none; }
+  h2 { font-size: 11pt; margin-bottom: 10px; padding-bottom: 4px; border-bottom: 2px solid var(--mustard); }
+  .impact { gap: 8px; }
+  .impact li { padding: 10px 12px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .num { font-size: 15pt; margin-bottom: 4px; }
+  .impact p { font-size: 8.4pt; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .timeline::before { left: 5px; }
+  .timeline::after { display: none !important; }
+  .photo, .hero h1, .role, .chips li, .job::before { animation: none !important; }
+  .job { padding-left: 24px; break-inside: auto; }
+  .job h3, .job .co, .when { break-after: avoid; }
+  .impact { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+  .board { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .bg { grid-template-columns: 1fr 1fr !important; }
+  .num { white-space: nowrap; }
+  .job .lead, .job ul { max-width: none; }
+  .langs { gap: 2px !important; }
+  .langs li { grid-template-columns: 60px minmax(0, 1fr) 44px; font-size: 8.6pt; }
+  .job + .job { margin-top: 12px; }
+  .job::before { width: 13px; height: 13px; border-width: 3px; top: 4px; box-shadow: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .when { background: none; padding: 0; margin-bottom: 0; }
+  .job h3 { font-size: 10.5pt; }
+  .co { margin-bottom: 2px; }
+  .tags li { padding: 2px 8px; font-size: 8.4pt; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .skills { gap: 14px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#cv">Skip to the CV</a>
+
+<header class="hero">
+  <div class="in">
+    <div class="photo"><img src="/assets/cv-portrait.jpg" alt="Ariadna Martín Sánchez" width="640" height="800"></div>
+    <div>
+      <h1><b>Ariadna</b> Martín Sánchez</h1>
+      <svg class="squiggle" viewBox="0 0 210 14" aria-hidden="true"><path d="M3 9 C 30 2, 50 13, 78 7 S 128 2, 150 8 S 190 11, 207 5" fill="none" stroke="#EDB63E" stroke-width="4" stroke-linecap="round"/></svg>
+      <p class="role">Engineering Manager · Agile Delivery Lead</p>
+      <p class="pitch">16+ years in tech. I started as a backend developer and now build engineering teams that deliver predictably and want to stay. Open to remote roles across Europe.</p>
+      <ul class="chips">
+        <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Spain · Remote (CET)</span></li>
+        <li><a href="mailto:hello@ariadnamartin.dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>hello@ariadnamartin.dev</a></li>
+        <li><a href="https://www.linkedin.com/in/ariadnamartinsanchez/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM10 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.8-2.8s-2 1.3-2 2.7V21h-4z"/></svg>LinkedIn</a></li>
+        <li><a href="https://ariadnamartin.dev/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>ariadnamartin.dev</a></li>
+      </ul>
+    </div>
+    <p class="sticky">Currently: looking for my next team ✦</p>
+  </div>
+</header>
+
+<main id="cv">
+  <section class="alt" aria-labelledby="s-impact">
+    <div class="in">
+      <div class="title-row">
+        <div><p class="kicker">Selected impact</p>
+        <h2 id="s-impact">What changed when I led</h2></div>
+        <svg width="84" height="84" viewBox="0 0 120 120" aria-hidden="true"><rect x="26" y="20" width="68" height="88" rx="8" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/><rect x="44" y="12" width="32" height="16" rx="5" fill="#EDB63E" stroke="#2C2130" stroke-width="2.5"/><path d="M38 48 l6 6 l11 -12" fill="none" stroke="#2E5D6E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 48 H 82" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/><path d="M38 70 l6 6 l11 -12" fill="none" stroke="#2E5D6E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 70 H 82" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/><path d="M38 92 l6 6 l11 -12" fill="none" stroke="#2E5D6E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M62 92 H 76" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+      <ul class="impact">
+        <li class="reveal"><span class="num" data-to="30" data-pre="−" data-suf="%">−30%</span><p>Team cycle time at Eventbrite, through better planning, ownership and engineering practices</p></li>
+        <li class="reveal"><span class="num" data-to="105" data-pre="+" data-suf="%">+105%</span><p>Automated refund requests in five months, reducing customer support friction</p></li>
+        <li class="reveal"><span class="num" data-to="50" data-pre="" data-suf="M+">50M+</span><p>Monthly impressions of promoted content, using KPIs and A/B testing</p></li>
+        <li class="reveal"><span class="num" data-to="70" data-pre="40 → " data-suf="+">40 → 70+</span><p>Contributors in the Marketing Technology organisation I led at Sunweb Group</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ways-sec" aria-labelledby="s-ways">
+    <div class="in">
+      <p class="kicker">How I work</p>
+      <h2 id="s-ways">Four things my teams can count on</h2>
+      <ul class="ways">
+        <li class="w1 reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="17" cy="17" r="7" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/><circle cx="32" cy="19" r="6" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/><path d="M5 40 C 6 30, 28 30, 29 40 M 24 33 C 28 28, 43 28, 44 38" fill="none" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/><path d="M36 6 c -2 -3 -7 -1 -5 3 l 5 5 l 5 -5 c 2 -4 -3 -6 -5 -3 z" fill="#C93D2E"/></svg><h3>People first</h3><p>I take the time to understand what drives each person and where they want to grow.</p></li>
+        <li class="w2 reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30 C 14 18, 22 38, 30 24 S 40 14, 44 18" fill="none" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/><path d="M38 12 L 45 18 L 37 22" fill="none" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="38" r="3" fill="#46786C"/><circle cx="20" cy="38" r="3" fill="#46786C"/><circle cx="30" cy="38" r="3" fill="#46786C"/></svg><h3>Continuous value</h3><p>Shared priorities, little work in progress and fast reviews, so work keeps flowing.</p></li>
+        <li class="w3 reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="26" rx="4" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/><path d="M17 18 l-5 4 l5 4 M31 18 l5 4 l-5 4 M26 16 l-4 12" fill="none" stroke="#7A68B5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 41 H 32" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Close to the tech</h3><p>A manager who understands the trade-offs, not just the deadlines.</p></li>
+        <li class="w4 reveal"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38 L 10 12 C 10 10, 12 8, 14 8 L 38 8 L 32 17 L 38 26 L 14 26" fill="#EDB63E" stroke="#2C2130" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 38 V 42" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/></svg><h3>No chasing needed</h3><p>I bring problems early, with context and a proposal, and build teams that do the same.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="alt" aria-labelledby="s-exp">
+    <div class="in">
+      <div class="title-row">
+        <div><p class="kicker">Experience</p>
+        <h2 id="s-exp">Where I've worked</h2></div>
+        <svg width="130" height="84" viewBox="0 0 200 130" aria-hidden="true"><rect x="6" y="6" width="188" height="118" rx="8" fill="#FFFFFF" stroke="#2C2130" stroke-width="2.5"/><path d="M69 18 V 112 M 131 18 V 112" stroke="#D3DEE1" stroke-width="2"/><rect x="18" y="20" width="38" height="34" rx="3" fill="#F7DCD7" stroke="#2C2130" stroke-width="2" transform="rotate(-4 37 37)"/><rect x="81" y="24" width="38" height="34" rx="3" fill="#E5DFF3" stroke="#2C2130" stroke-width="2" transform="rotate(2 100 41)"/><rect x="143" y="20" width="38" height="34" rx="3" fill="#DCEBE7" stroke="#2C2130" stroke-width="2" transform="rotate(-3 162 37)"/><rect x="145" y="66" width="38" height="34" rx="3" fill="#DCEBE7" stroke="#2C2130" stroke-width="2" transform="rotate(4 164 83)"/><path d="M152 37 l5 5 l9 -10 M154 83 l5 5 l9 -10" fill="none" stroke="#2E5D6E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M88 90 C 104 84, 116 88, 128 82" fill="none" stroke="#C93D2E" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 6"/><path d="M122 76 L 130 82 L 121 87" fill="none" stroke="#C93D2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <ol class="timeline">
+        <li class="job now reveal">
+          <span class="when">Mar 2023 – Jul 2026</span>
+          <h3>Engineering Manager</h3>
+          <p class="co">Eventbrite <span>· Remote</span></p>
+          <p class="lead">Led a team of 8 engineers responsible for Eventbrite's advertising and post-purchase platforms, partnering with Product, Design and Data leadership to deliver customer-facing products at global scale.</p>
+          <ul>
+            <li>Grew the team from 4 to 8 engineers, leading hiring, onboarding, promotion planning and career development with 100% retention over two years.</li>
+            <li>Reduced team cycle time by 30% through stronger planning, prioritisation, ownership and engineering practices.</li>
+            <li>Introduced P0 end-to-end testing and a regression-prevention approach, reducing recurring defects by ~25%.</li>
+            <li>Automated CI/CD workflows, strengthened service-health monitoring and alerting, and established testing strategies, ADRs and technical proposals.</li>
+            <li>Led post-purchase initiatives that increased automated refund requests by 105% within five months.</li>
+            <li>Scaled advertising across web and native discovery surfaces with KPIs and A/B testing, reaching 50M+ monthly impressions.</li>
+            <li>Expanded engineering onboarding to cover 90% of Spain's 100-person engineering organisation, and extended it to India as that site grew from 50 to 100 engineers.</li>
+            <li>Orchestrated a global mentorship programme across the US, Spain and India with 100+ mentor–mentee pairs per edition.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <span class="when">Apr 2019 – Mar 2023</span>
+          <h3>Head of Engineering</h3>
+          <p class="co">Sunweb Group <span>· Girona</span></p>
+          <p class="lead">Led the Marketing Technology organisation through rapid growth, from ~40 to 70+ internal and external contributors across multiple engineering teams and product squads.</p>
+          <ul>
+            <li>Owned organisational strategy, workforce planning, hiring and budget for 50+ internal and 20+ external contributors.</li>
+            <li>Redesigned a 50-person tech organisation: team domains, scopes, stakeholder ownership and Tech Lead roles, plus a dedicated Platform team.</li>
+            <li>Built a career framework with skills, expectations and growth paths for the whole engineering organisation.</li>
+            <li>Shaped a 3–5 year technology strategy, roadmap and OKRs covering platform engineering, automation, CI/CD and legacy modernisation.</li>
+            <li>Led the engineering hiring strategy and 12 new hires, scaling the organisation by more than 75%.</li>
+            <li>Drove people initiatives across 8 teams: calibration, engagement surveys, mentorship and team health checks.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <span class="when">Nov 2018 – Apr 2019</span>
+          <h3>Solution Specific Knowledge Leader</h3>
+          <p class="co">everis (NTT DATA)</p>
+          <ul>
+            <li>Drove engineering standardisation (code review, version control, collaboration), increasing adoption of shared practices by ~30%.</li>
+            <li>Led requirements and end-to-end delivery across 3 engineering teams as the primary client contact, from discovery to production.</li>
+            <li>Delivered a major system migration and extended the platform to customer and supplier management.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <span class="when">Apr 2015 – Oct 2018</span>
+          <h3>Backend Developer &amp; Scrum Master</h3>
+          <p class="co">Sunweb Group</p>
+          <ul>
+            <li>Managed engineering delivery for a customer-facing product across a 10-person team, with Product and cross-functional stakeholders.</li>
+            <li>As Scrum Master, increased feature delivery speed by ~30% and reduced customer-facing bugs by ~20%.</li>
+            <li>Supported hiring and onboarding of 12 new engineers during a high-growth phase.</li>
+          </ul>
+        </li>
+        <li class="job reveal">
+          <span class="when">Apr 2011 – Apr 2015</span>
+          <h3>Backend Developer</h3>
+          <p class="co">Aetech</p>
+          <p class="lead">Built and maintained MES and ERP systems and custom business applications in Delphi, SQL Server, VB.NET and C#.</p>
+        </li>
+        <li class="job reveal">
+          <span class="when">Jul 2009 – Mar 2011</span>
+          <h3>Backend Developer</h3>
+          <p class="co">Caixa de Girona</p>
+          <p class="lead">Developed banking systems and reporting solutions, and supported technology integration initiatives.</p>
+          <span class="origin">Where it all started: my first commit.</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-skills">
+    <div class="in">
+      <p class="kicker">Skills</p>
+      <h2 id="s-skills">My toolkit board</h2>
+      <div class="board">
+        <div class="reveal">
+          <h3>Leading people</h3>
+          <ul class="tags"><li>Engineering management</li><li>Hiring</li><li>Career frameworks</li><li>Mentoring</li><li>Org design</li><li>Scaling teams</li></ul>
+        </div>
+        <div class="reveal">
+          <h3>Delivery &amp; tech</h3>
+          <ul class="tags"><li>Scrum</li><li>Agile delivery</li><li>OKRs &amp; KPIs</li><li>CI/CD</li><li>Engineering quality</li><li>Backend engineering</li></ul>
+        </div>
+        <div class="reveal">
+          <h3>Product &amp; strategy</h3>
+          <ul class="tags"><li>Product engineering</li><li>Technical strategy</li><li>A/B testing</li><li>Roadmaps</li><li>Budgets</li><li>Stakeholder management</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" aria-labelledby="s-edu">
+    <div class="in">
+      <p class="kicker">Background</p>
+      <h2 id="s-edu">Education &amp; languages</h2>
+      <div class="bg">
+        <div class="edu reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 18 L 24 9 L 44 18 L 24 27 Z" fill="#EDB63E" stroke="#2C2130" stroke-width="2.5" stroke-linejoin="round"/><path d="M12 22 V 32 C 12 36, 36 36, 36 32 V 22" fill="none" stroke="#2C2130" stroke-width="2.5"/><path d="M42 19 V 30" stroke="#2C2130" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div><h3>Bachelor of Technology</h3><p>University of Girona · 2007 – 2010</p></div>
+        </div>
+        <ul class="langs reveal">
+          <li><span>Catalan</span><i style="--lvl:100%"></i><em>Native</em></li>
+          <li><span>Spanish</span><i style="--lvl:100%"></i><em>Native</em></li>
+          <li><span>English</span><i style="--lvl:85%"></i><em>C1</em></li>
+          <li><span>German</span><i style="--lvl:18%"></i><em>A1</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <p class="next"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="3" fill="#EDB63E" stroke="#FFFFFF" stroke-width="2.5" transform="rotate(-6 24 24)"/><path d="M17 25 l5 5 l10 -12" fill="none" stroke="#2C2130" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Next card on my board: your team. Shared privately, please ask before forwarding.</p>
+    <button class="btn" type="button" onclick="window.print()">Save as PDF</button>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var motion = window.matchMedia && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!motion || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+
+  function count(el) {
+    var to = +el.dataset.to, pre = el.dataset.pre, suf = el.dataset.suf, start = null;
+    function step(t) {
+      if (start === null) start = t;
+      var p = Math.min((t - start) / 1100, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + Math.round(to * eased) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('shown');
+      var n = e.target.querySelector('.num');
+      if (n) count(n);
+      io.unobserve(e.target);
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.reveal, .title-row').forEach(function (el) { io.observe(el); });
+
+  var line = document.querySelector('.timeline');
+  function progress() {
+    var r = line.getBoundingClientRect(), mid = window.innerHeight * 0.6;
+    var p = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+    line.style.setProperty('--progress', p.toFixed(3));
+  }
+  if (line) { progress(); window.addEventListener('scroll', progress, { passive: true }); window.addEventListener('resize', progress); }
+
+  // Never print a half-revealed page.
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('shown'); });
+    if (line) line.style.setProperty('--progress', 1);
+    document.querySelectorAll('.num').forEach(function (n) { n.textContent = n.dataset.pre + n.dataset.to + n.dataset.suf; });
+  });
+})();
+</script>
+</body>
+</html>
