@@ -93,7 +93,7 @@ h1, h2, h3 { text-wrap: balance; }
 .blob::before { content: ""; position: absolute; inset: 0; transform: translate(18px, 18px); background: var(--mustard); border-radius: 14px; }
 .blob img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; border-radius: 14px; transition: transform .35s ease; }
 .blob:hover img { transform: translate(6px, 6px); }
-.hello .hi { font-weight: 500; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--mustard); margin-bottom: 12px; }
+.hello .hi { font-weight: 500; font-size: 1.05rem; letter-spacing: 0.02em; color: #F6CF73; margin-bottom: 12px; }
 .hello h1 { font-weight: 300; font-size: clamp(1.95rem, 3.7vw, 2.8rem); line-height: 1.15; margin-bottom: 24px; max-width: 20ch; }
 .hello h1 b { font-weight: 500; }
 .hello .claim { font-weight: 600; font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.4; margin-bottom: 22px; max-width: 38ch; }
@@ -180,6 +180,15 @@ h1, h2, h3 { text-wrap: balance; }
 .band .alt a { text-underline-offset: 3px; user-select: all; }
 .band .btn { background: var(--plum); color: var(--white); }
 .band .btn:hover { background: var(--petrol); }
+.band .cal { padding-block: 0 56px; }
+.cal-gate { background: var(--white); border-radius: 12px; padding: 32px; max-width: 760px; }
+.cal-gate p { color: var(--ink); max-width: 60ch; }
+.cal-gate p a { color: var(--petrol-deep); text-underline-offset: 3px; }
+.cal-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 20px; }
+.band .cal-gate .btn { border: 0; font: inherit; font-weight: 600; cursor: pointer; }
+.cal-out { color: var(--plum); font-weight: 500; text-underline-offset: 3px; }
+.cal-frame { display: block; width: 100%; height: 720px; border: 0; border-radius: 12px; background: var(--white); }
+@media (max-width: 640px) { .cal-gate { padding: 24px; } .cal-frame { height: 1000px; } }
 
 /* Footer */
 footer { background: var(--petrol-deep); color: rgba(255, 255, 255, 0.86); font-size: 0.95rem; }
@@ -244,7 +253,7 @@ footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 
       <a href="#about">About</a>
       <a href="#questions">Questions</a>
       <a class="lang" href="es/" lang="es" hreflang="es" aria-label="Versión en español">ES</a>
-      <a class="cta" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a call</a>
+      <a class="cta" href="#book">Book a call</a>
     </nav>
   </div>
 </header>
@@ -316,7 +325,7 @@ footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 
           <p>When a team grows, the way it works often doesn't grow with it. Commitments slip, priorities blur, and Product and Engineering drift apart. I help you find where delivery gets stuck, and get it moving again.</p>
         </div>
         <div class="actions">
-          <a class="btn" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a free Health Check
+          <a class="btn" href="#book">Book a free Health Check
             <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <span class="note">45 minutes, online, in English or Spanish</span>
         </div>
@@ -400,7 +409,7 @@ footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 
       <h2 class="sec-title">Four ways to work together</h2>
       <p class="sec-lead">Start with the free Health Check. If you want to go further, each step builds on the one before, and you can stop at any point.</p>
       <ul class="offers">
-        <li class="offer"><span class="tag a2">Free · 45 minutes</span><h3>Delivery Health Check</h3><p>A conversation about how your team really works, then a short written report: a score for five areas and three recommendations to start with.</p><a href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a free Health Check</a></li>
+        <li class="offer"><span class="tag a2">Free · 45 minutes</span><h3>Delivery Health Check</h3><p>A conversation about how your team really works, then a short written report: a score for five areas and three recommendations to start with.</p><a href="#book">Book a free Health Check</a></li>
         <li class="offer"><span class="tag a1">2–3 days</span><h3>Delivery Diagnostic</h3><p>A closer look with your real delivery data and interviews with the team, to pin down where work gets stuck and what to change first.</p></li>
         <li class="offer"><span class="tag a3">Four weeks</span><h3>Delivery Improvement Sprint</h3><p>We agree a few concrete changes with the people doing the work, take a baseline before we start, and measure again at the end.</p></li>
         <li class="offer"><span class="tag a4">Ongoing, part-time</span><h3>Fractional Delivery Lead</h3><p>Continuing support inside your team, for when delivery needs steady leadership but not a full-time hire.</p></li>
@@ -422,16 +431,35 @@ footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 
     </div>
   </section>
 
-  <section class="band">
+  <section class="band" id="book">
     <div class="in">
       <div>
         <h2>Find out where your delivery gets stuck.</h2>
         <p class="alt">Prefer email? Write to <a href="mailto:hello@ariadnamartin.dev">hello@ariadnamartin.dev</a></p>
       </div>
-      <a class="btn" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a free Health Check
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="in cal">
+      <div class="cal-gate" id="cal-gate">
+        <p>Pick a time for your free 45-minute Health Check. The calendar is provided by Calendly, which sets its own cookies once it loads. <a href="legal.html#cookies">More about this</a></p>
+        <div class="cal-actions">
+          <button class="btn" type="button" id="cal-load">Show available times
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9.5M8.5 3.5 13 8l-4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <a class="cal-out" href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">or open Calendly in a new tab</a>
+        </div>
+      </div>
     </div>
   </section>
+<script>
+document.getElementById('cal-load').addEventListener('click', function () {
+  var f = document.createElement('iframe');
+  f.src = 'https://calendly.com/ariadnams/delivery-health-check-45-min?embed_domain=ariadnamartin.dev&embed_type=Inline&hide_gdpr_banner=0';
+  f.title = 'Book a free Health Check with Ariadna (Calendly)';
+  f.className = 'cal-frame';
+  var gate = document.getElementById('cal-gate');
+  gate.replaceWith(f);
+  f.focus();
+});
+</script>
 </main>
 
 <footer>
@@ -458,7 +486,7 @@ footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.16); padding-block: 
         <li><a href="#how-i-work">How I work</a></li>
         <li><a href="#questions">Questions</a></li>
         <li><a href="es/" lang="es" hreflang="es">Español</a></li>
-        <li><a href="https://calendly.com/ariadnams/delivery-health-check-45-min" target="_blank" rel="noopener">Book a call</a></li>
+        <li><a href="#book">Book a call</a></li>
       </ul>
     </div>
   </div>

@@ -17,7 +17,9 @@ grep -q 'hello@ariadnamartin.dev' legal.html && ok "Legal page shows the contact
 # 2. No third-party embeds, trackers or cookies
 ext=$(grep -o -E '(src|href)="https?://[^"]*"' $PAGES | grep -v -E 'ariadnamartin\.dev|calendly\.com|linkedin\.com|aepd\.es|tally\.so')
 [ -z "$ext" ] && ok "No unexpected third-party resources" || bad "Unexpected external resources:\n$ext"
-grep -q -i -E 'document\.cookie|localStorage|gtag\(|googletagmanager|facebook\.net|hotjar|<iframe' $PAGES && bad "Tracking, cookies or embeds found: add a cookie banner and update legal.html first" || ok "No tracking, cookies or embeds"
+grep -q -i -E 'document\.cookie|localStorage|gtag\(|googletagmanager|facebook\.net|hotjar|<iframe|<script[^>]+src=' $PAGES && bad "Tracking, cookies or embeds found: add a cookie banner and update legal.html first" || ok "No tracking, cookies or embeds on page load"
+# The Calendly calendar may only load after a click, and legal.html must say so
+for f in index.html es/index.html; do grep -q 'createElement(.iframe.)' $f && { grep -q 'id="cal-load"' $f && grep -q 'Show available times' legal.html && ok "Calendly calendar loads only on click and is explained in legal.html ($f)" || bad "Calendly embed in $f must stay click-to-load and be described in legal.html"; }; done
 
 # 3. Accessibility basics
 noalt=$(grep -o '<img[^>]*>' $PAGES | grep -v 'alt=')
