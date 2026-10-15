@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.." || exit 1
 fail=0
 ok()   { echo "  ✅ $1"; }
 bad()  { echo "  ❌ $1"; fail=1; }
-PAGES="index.html es/index.html legal.html 404.html"
+PAGES="index.html es/index.html teams/index.html teams/es/index.html nota-de-tast/index.html legal.html 404.html"
 
 echo "Pre-publish checks"
 
@@ -19,7 +19,7 @@ ext=$(grep -o -E '(src|href)="https?://[^"]*"' $PAGES | grep -v -E 'ariadnamarti
 [ -z "$ext" ] && ok "No unexpected third-party resources" || bad "Unexpected external resources:\n$ext"
 grep -q -i -E 'document\.cookie|localStorage|gtag\(|googletagmanager|facebook\.net|hotjar|<iframe|<script[^>]+src=' $PAGES && bad "Tracking, cookies or embeds found: add a cookie banner and update legal.html first" || ok "No tracking, cookies or embeds on page load"
 # The Calendly calendar may only load after a click, and legal.html must say so
-for f in index.html es/index.html; do grep -q 'createElement(.iframe.)' $f && { grep -q 'id="cal-load"' $f && grep -q 'Show available times' legal.html && ok "Calendly calendar loads only on click and is explained in legal.html ($f)" || bad "Calendly embed in $f must stay click-to-load and be described in legal.html"; }; done
+for f in teams/index.html teams/es/index.html; do grep -q 'createElement(.iframe.)' $f && { grep -q 'id="cal-load"' $f && grep -q 'Show available times' legal.html && ok "Calendly calendar loads only on click and is explained in legal.html ($f)" || bad "Calendly embed in $f must stay click-to-load and be described in legal.html"; }; done
 
 # 3. Accessibility basics
 noalt=$(grep -o '<img[^>]*>' $PAGES | grep -v 'alt=')
