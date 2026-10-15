@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nota de Tast · La web de tu bodega, catada con calma</title>
+<meta name="description" content="Nota de Tast, por Ariadna Martín: reviso la web de tu bodega en cuatro fases, como un vino, y te digo qué te hace perder ventas y por dónde empezar. Mini nota gratis.">
+<link rel="canonical" href="https://ariadnamartin.dev/nota-de-tast/es/">
+<link rel="alternate" hreflang="ca" href="https://ariadnamartin.dev/nota-de-tast/">
+<link rel="alternate" hreflang="es" href="https://ariadnamartin.dev/nota-de-tast/es/">
+<link rel="alternate" hreflang="x-default" href="https://ariadnamartin.dev/nota-de-tast/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ariadnamartin.dev/nota-de-tast/es/">
+<meta property="og:title" content="Nota de Tast · La web de tu bodega, catada con calma">
+<meta property="og:description" content="Una nota para cada fase de la web de tu bodega, lo que te hace perder ventas y por dónde empezar. Mini nota gratis.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:image" content="https://ariadnamartin.dev/assets/og-nota-de-tast-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nota de Tast: la web de tu bodega, catada con calma">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Nota de Tast", "url": "https://ariadnamartin.dev/nota-de-tast/es/", "inLanguage": "es", "image": "https://ariadnamartin.dev/assets/og-nota-de-tast-es.jpg", "description": "Auditoría de la web de tu bodega en cuatro fases, como un vino: una nota para cada fase, lo que te hace perder ventas y por dónde empezar. Mini nota gratuita.", "email": "hello@ariadnamartin.dev", "areaServed": [{"@type": "AdministrativeArea", "name": "Alt Empordà"}, {"@type": "AdministrativeArea", "name": "Catalunya"}], "provider": {"@type": "Person", "name": "Ariadna Martín Sánchez", "url": "https://ariadnamartin.dev/", "sameAs": ["https://www.linkedin.com/in/ariadnamartinsanchez/"]}}
+</script>
+<meta name="theme-color" content="#2E5D6E">
+<style>
+@font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/piazzolla-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "Piazzolla"; font-style: italic; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/piazzolla-latin-wght-italic.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/figtree-400.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/figtree-500.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/figtree-600.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/figtree-700.woff2") format("woff2"); }
+@font-face { font-family: "DM Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/dm-mono-500.woff2") format("woff2"); }
+.skip { position: absolute; left: 16px; top: -60px; background: #1E2A2E; color: #FFFFFF; padding: 10px 16px; border-radius: 8px; z-index: 10; text-decoration: none; }
+.skip:focus { top: 12px; }
+</style>
+<style>
+/* Layout: una fitxa de tast impresa. Capçalera amb la nota, quatre fases del tast com a fitxa, escala de serveis, preguntes i formulari. */
+:root {
+  --bg: #F7F6F2;
+  --sheet: #FFFFFF;
+  --ink: #1E2A2E;
+  --muted: #5C686C;
+  --line: #E2DFD8;
+  --teal: #2E5D6E;
+  --teal-soft: #E4ECEC;
+  --wine: #8C2F45;
+  --on-dark: #F4F6F5;
+  --font-display: 'Piazzolla', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-data: 'DM Mono', ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0F171A; --sheet: #162227; --ink: #E9EEEF; --muted: #A0AEB3; --line: #2C3B41; --teal: #7FB2C2; --teal-soft: #1C3038; --wine: #E07D93; --on-dark: #0F171A; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0F171A; --sheet: #162227; --ink: #E9EEEF; --muted: #A0AEB3; --line: #2C3B41; --teal: #7FB2C2; --teal-soft: #1C3038; --wine: #E07D93; --on-dark: #0F171A; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; padding-inline: 20px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+a { color: var(--teal); }
+:focus-visible { outline: 3px solid var(--wine); outline-offset: 3px; }
+.mono { font-family: var(--font-display); font-style: italic; font-size: 18px; letter-spacing: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 999px; font: inherit; font-weight: 700; font-size: 16px; text-decoration: none; border: none; cursor: pointer; background: var(--teal); color: var(--on-dark); }
+.btn.alt { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.hero h1 em, .block h2 em { font-style: italic; }
+.sig { font-family: var(--font-display); font-style: italic; font-size: 24px; color: var(--teal); margin-top: 18px; display: block; }
+
+nav.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 22px; flex-wrap: wrap; }
+.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.mark svg { width: 34px; height: 34px; }
+.mark b { font-family: var(--font-display); font-size: 24px; font-weight: 500; }
+.mark small { color: var(--muted); font-size: 14px; }
+nav.top .links { display: flex; gap: 22px; flex-wrap: wrap; font-weight: 600; font-size: 15px; }
+nav.top .links a { color: var(--ink); text-decoration: none; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; align-items: center; padding-block: 48px 88px; }
+.hero h1 { font-size: clamp(42px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.015em; }
+.hero h1 em { color: var(--wine); }
+.hero p { font-size: 20px; color: var(--muted); max-width: 46ch; margin: 22px 0 30px; }
+.hero .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.card { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 30px; position: relative; transform: rotate(1deg); box-shadow: 0 30px 60px rgba(30, 42, 46, 0.10), 0 2px 6px rgba(30, 42, 46, 0.05); }
+.card .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.card .head h3 { font-size: 26px; line-height: 1.1; }
+.card .score { font-family: var(--font-data); font-weight: 700; font-size: 44px; line-height: 1; color: var(--wine); }
+.card .score small { font-size: 16px; color: var(--muted); }
+.rows { display: flex; flex-direction: column; margin-top: 8px; }
+.rows .r { display: grid; grid-template-columns: 80px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.rows .r span:nth-child(2) { font-size: 15px; color: var(--muted); }
+.dots { display: flex; gap: 4px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--teal); }
+.dots i.on { background: var(--teal); }
+.card .verdict { font-family: var(--font-display); font-style: italic; font-size: 19px; margin-top: 16px; }
+.card .stamp { position: absolute; right: -12px; bottom: -16px; transform: rotate(-6deg); border: 1px solid var(--wine); border-radius: 999px; color: var(--wine); background: var(--bg); padding: 4px 14px; font-size: 16px; }
+
+section.block { padding-block: 96px; border-top: 1px solid var(--line); }
+.block h2 { font-size: clamp(34px, 4.6vw, 54px); line-height: 1.05; max-width: 20ch; }
+.block .intro { color: var(--muted); max-width: 58ch; margin: 16px 0 36px; font-size: 18px; }
+
+.phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.phase { padding: 28px 24px; background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; display: flex; flex-direction: column; gap: 10px; }
+.phase .mono { color: var(--wine); }
+.phase h3 { font-size: 30px; }
+.phase p { margin: 0; font-size: 15px; color: var(--muted); }
+.phase ul { margin: 4px 0 0; padding-left: 18px; font-size: 15px; }
+
+.ladder { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.offer { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 30px; display: flex; flex-direction: column; gap: 12px; }
+.offer.main { border: 2px solid var(--teal); }
+.offer .mono { color: var(--teal); }
+.offer h3 { font-size: 30px; line-height: 1.1; }
+.offer .price { font-family: var(--font-data); font-size: 22px; font-weight: 700; }
+.offer .price small { font-size: 13px; color: var(--muted); font-weight: 500; }
+.offer ul { margin: 0; padding-left: 18px; font-size: 15px; color: var(--muted); }
+.offer .btn { margin-top: auto; align-self: flex-start; }
+
+.me { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; align-items: start; }
+.me .face { width: 100%; object-fit: cover; border-radius: 4px; aspect-ratio: 4 / 5; max-width: 100%; background: var(--teal-soft); display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: var(--muted); font-size: 14px; }
+.me p { font-size: 18px; max-width: 60ch; margin: 0 0 14px; }
+.facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 20px; }
+.facts div b { display: block; font-family: var(--font-data); font-size: 30px; color: var(--teal); }
+.facts div span { font-size: 14px; color: var(--muted); }
+
+.faq details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.faq summary { font-family: var(--font-display); font-size: 23px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::after { content: '+'; font-family: var(--font-data); color: var(--teal); }
+.faq details[open] summary::after { content: '−'; }
+.faq details p { margin: 12px 0 0; color: var(--muted); max-width: 64ch; }
+
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.form { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px; padding: 30px; display: grid; gap: 14px; box-shadow: 0 20px 50px rgba(30, 42, 46, 0.06); }
+.form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
+.form input, .form textarea { font: inherit; font-weight: 400; min-height: 48px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--ink); }
+.form textarea { min-height: 96px; resize: vertical; }
+.err { color: var(--wine); font-size: 14px; margin: 0; }
+.ready { display: grid; gap: 12px; }
+.ready pre { white-space: pre-wrap; font-family: var(--font-body); font-size: 15px; margin: 0; background: var(--bg); padding: 14px; border: 1px solid var(--line); }
+.addr { font-family: var(--font-data); user-select: all; }
+footer { padding-block: 40px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 860px) {
+  .hero, .contact { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .phases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ladder { grid-template-columns: minmax(0, 1fr); }
+  .me { grid-template-columns: minmax(0, 1fr); }
+  .me .face { max-width: 220px; }
+  .card { transform: none; }
+}
+@media (max-width: 520px) {
+  .phases { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+
+
+<a class="skip" href="#inici">Saltar al contenido</a>
+<div class="wrap">
+  <nav class="top" aria-label="Principal">
+    <a class="mark" href="#inici">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 4 L29 4 C30 16 27 23 20 24 C13 23 10 16 11 4 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11.5 12 L28.5 12 C28 18 25 22 20 22.5 C15 22 12 18 11.5 12 Z" fill="var(--wine)"/><path d="M20 24 L20 34 M13 36 L27 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span><b>Nota de Tast</b> <small>por Ariadna Martín</small></span>
+    </a>
+    <div class="links"><a href="#fases">Qué cato</a><a href="#preus">Cómo empezar</a><a href="#preguntes">Preguntas</a><a href="#contacte">Contacto</a><a href="/nota-de-tast/" lang="ca" hreflang="ca" aria-label="Versió en català">CA</a></div>
+  </nav>
+
+  <header class="hero" id="inici">
+    <div>
+      <span class="mono" style="color: var(--wine)">Para bodegas · Alt Empordà y Cataluña</span>
+      <h1 style="margin-top: 14px">La web de tu bodega, <em>catada con calma.</em></h1>
+      <p>Miro tu web como un cliente que quiere comprar una botella o reservar una visita. Te doy una nota para cada fase, lo que te está haciendo perder ventas y por dónde empezar.</p>
+      <div class="ctas"><a class="btn" href="#contacte">Pide tu mini nota gratis</a><a class="btn alt" href="#fases">Cómo funciona</a></div>
+    </div>
+    <article class="card" aria-label="Ejemplo de nota de cata">
+      <div class="head">
+        <div><span class="mono" style="color: var(--muted)">Ejemplo · bodega del Alt Empordà</span><h3>Nota de cata</h3></div>
+        <span class="score">4,5<small>/10</small></span>
+      </div>
+      <div class="rows">
+        <div class="r"><span class="mono">Vista</span><span>Fotos potentes, textos con erratas</span><span class="dots" aria-label="6 de 10"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div>
+        <div class="r"><span class="mono">Nas</span><span>No explica quiénes sois ni desde cuándo</span><span class="dots" aria-label="5 de 10"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div>
+        <div class="r"><span class="mono">Boca</span><span>La tienda no muestra precios</span><span class="dots" aria-label="3 de 10"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+        <div class="r"><span class="mono">Final</span><span>Un evento ya pasado en la portada</span><span class="dots" aria-label="3 de 10"><i class="on"></i><i></i><i></i><i></i><i></i></span></div>
+      </div>
+      <p class="verdict">Gran oferta, mala venta. Lo primero: precios en la tienda.</p>
+      <span class="stamp mono">Catado a mano</span>
+    </article>
+  </header>
+
+  <section class="block" id="fases" aria-labelledby="fases-t">
+    <h2 id="fases-t">Cato la web en cuatro fases, como un vino.</h2>
+    <p class="intro">Cada fase recibe una nota sobre 10 y una explicación en palabras sencillas. Sin tecnicismos: lo que ve un cliente y lo que te está costando.</p>
+    <div class="phases">
+      <div class="phase"><span class="mono">01 · Vista</span><h3>Diseño</h3><p>Lo que el cliente ve en los primeros segundos.</p><ul><li>Fotos y colores</li><li>Lectura en el móvil</li><li>Textos y erratas</li></ul></div>
+      <div class="phase"><span class="mono">02 · Nas</span><h3>Marca</h3><p>Si la web transmite la bodega y su historia.</p><ul><li>Quiénes sois y de dónde venís</li><li>Premios y opiniones</li><li>Tono e idiomas</li></ul></div>
+      <div class="phase"><span class="mono">03 · Boca</span><h3>Venta</h3><p>Lo fácil que es comprar o reservar.</p><ul><li>Tienda y precios</li><li>Reservas de enoturismo</li><li>Envíos y pago</li></ul></div>
+      <div class="phase"><span class="mono">04 · Final</span><h3>Duración</h3><p>Si la web se mantiene viva y te encuentran.</p><ul><li>Contenido al día</li><li>Google y redes</li><li>Comparación con vecinos</li></ul></div>
+    </div>
+  </section>
+
+  <section class="block" id="preus" aria-labelledby="preus-t">
+    <h2 id="preus-t">Tres maneras de empezar.</h2>
+    <p class="intro">Empieza por la mini nota gratuita. Si te sirve, hacemos la completa; si quieres, te ayudo a hacer los cambios.</p>
+    <div class="ladder">
+      <div class="offer"><span class="mono">Gratis · 2 días</span><h3>Mini nota</h3><span class="price">0 €</span><ul><li>Una página con tu nota global</li><li>Los 3 errores que más ventas te hacen perder</li><li>Sin compromiso</li></ul><a class="btn alt" href="#contacte">La quiero</a></div>
+      <div class="offer main"><span class="mono">La más pedida · 5 días</span><h3>Nota de cata completa</h3><span class="price">Precio a consultar <small>te lo digo con la mini nota</small></span><ul><li>Nota de las cuatro fases</li><li>Comparación con 4–5 bodegas vecinas</li><li>5 mejoras ordenadas por impacto</li><li>Propuesta visual de la portada</li><li>Una llamada de 30 minutos para comentarla</li></ul><a class="btn" href="#contacte">Pídela</a></div>
+      <div class="offer"><span class="mono">A medida</span><h3>Hagámoslo realidad</h3><span class="price">Presupuesto</span><ul><li>Rediseño o mejoras de la web</li><li>Tienda y reservas online</li><li>Fotos, textos e idiomas</li></ul><a class="btn alt" href="#contacte">Hablemos</a></div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="qui-t">
+    <div class="me">
+      <img class="face" src="/assets/portrait.jpg" alt="Ariadna Martín">
+      <div>
+        <h2 id="qui-t" style="margin-bottom: 18px">Soy Ariadna.</h2>
+        <p>Llevo más de 16 años trabajando en tecnología, ayudando a equipos a construir productos digitales que funcionan. Ahora pongo esa mirada al servicio de las bodegas.</p>
+        <p>No te voy a vender una web nueva de entrada. Primero te digo, con datos y en palabras claras, qué funciona y qué no. Después decides tú.</p>
+        <p>Me gusta pensar que una buena web es como una buena botella: se nota cuando alguien le ha puesto cariño.</p>
+        <span class="sig">Ariadna</span>
+        <div class="facts"><div><b>16+</b><span>años en producto digital</span></div><div><b>4</b><span>fases en cada nota</span></div><div><b>5</b><span>mejoras, ordenadas</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block faq" id="preguntes" aria-labelledby="faq-t">
+    <h2 id="faq-t" style="margin-bottom: 24px">Preguntas</h2>
+    <details><summary>¿Qué necesitas de mí?</summary><p>Solo la dirección de tu web y un correo para enviarte la nota. No hace falta acceso a nada.</p></details>
+    <details><summary>¿La mini nota es gratis de verdad?</summary><p>Sí. Es una página con la nota global y los tres errores principales. Si no quieres nada más, no pasa nada.</p></details>
+    <details><summary>¿Cómo trabajas?</summary><p>Reviso la web página a página, como lo haría un cliente, y con herramientas de análisis. Cada nota la compruebo y la firmo yo antes de enviarla.</p></details>
+    <details><summary>¿Y si mi web es nueva?</summary><p>Mejor todavía: es el momento de corregir pequeñas cosas antes de que cuesten ventas.</p></details>
+  </section>
+
+  <section class="block" id="contacte" aria-labelledby="c-t">
+    <div class="contact">
+      <div>
+        <h2 id="c-t">Pide tu mini nota.</h2>
+        <p class="intro">Déjame la web de la bodega y en dos días laborables te envío la nota. Si lo prefieres, escríbeme directamente a <span class="addr">hello@ariadnamartin.dev</span>.</p>
+      </div>
+      <div class="form">
+        <form id="form" novalidate style="display: grid; gap: 14px">
+          <label for="f-celler">Nombre de la bodega<input id="f-celler" autocomplete="organization"></label>
+          <label for="f-web">Dirección de la web<input id="f-web" inputmode="url" placeholder="www.tubodega.com"></label>
+          <label for="f-name">Tu nombre<input id="f-name" autocomplete="name"></label>
+          <label for="f-msg">¿Algo que quieras que mire? (opcional)<textarea id="f-msg"></textarea></label>
+          <p class="err" id="err" hidden>Necesito el nombre de la bodega y la dirección de la web.</p>
+          <button type="submit" class="btn" style="justify-self: start">Preparar la solicitud</button>
+        </form>
+        <div class="ready" id="ready" hidden>
+          <strong>Perfecto. Envíame este mensaje y te respondo en dos días laborables.</strong>
+          <pre id="msg"></pre>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap">
+            <a class="btn" id="mail" href="#">Abrir el correo</a>
+            <button type="button" class="btn alt" id="copy">Copiar el mensaje</button>
+          </div>
+          <span style="font-size: 14px">Si no se abre, envíalo a <span class="addr">hello@ariadnamartin.dev</span>.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Nota de Tast · un servicio de <a href="/">Ariadna Martín Sánchez</a> · <a href="/legal.html">Privacidad y aviso legal (en inglés)</a></span>
+    <span>Notas escritas en castellano, catalán o inglés</span>
+  </footer>
+</div>
+
+<script>
+var EMAIL = 'hello@ariadnamartin.dev';
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var celler = document.getElementById('f-celler').value.trim();
+  var web = document.getElementById('f-web').value.trim();
+  if (!celler || !web) { document.getElementById('err').hidden = false; document.getElementById(celler ? 'f-web' : 'f-celler').focus(); return; }
+  var name = document.getElementById('f-name').value.trim();
+  var extra = document.getElementById('f-msg').value.trim();
+  var text = 'Hola Ariadna,\n\nMe gustaría recibir la mini nota de cata para ' + celler + ' (' + web + ').' + (extra ? '\n\nMe preocupa sobre todo: ' + extra : '') + '\n\n' + (name || '');
+  document.getElementById('msg').textContent = text;
+  document.getElementById('mail').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Mini nota de cata: ' + celler) + '&body=' + encodeURIComponent(text);
+  document.getElementById('form').hidden = true;
+  document.getElementById('ready').hidden = false;
+});
+document.getElementById('copy').addEventListener('click', function () {
+  var btn = this, pre = document.getElementById('msg');
+  function selectIt() { var r = document.createRange(); r.selectNodeContents(pre); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Seleccionado: cópialo'; }
+  try { navigator.clipboard.writeText(pre.textContent).then(function () { btn.textContent = 'Copiado'; }, selectIt); } catch (err) { selectIt(); }
+});
+</script>
+
+</body>
+</html>

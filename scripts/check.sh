@@ -5,7 +5,7 @@ cd "$(dirname "$0")/.." || exit 1
 fail=0
 ok()   { echo "  ✅ $1"; }
 bad()  { echo "  ❌ $1"; fail=1; }
-PAGES="index.html es/index.html teams/index.html teams/es/index.html nota-de-tast/index.html legal.html 404.html"
+PAGES="index.html es/index.html teams/index.html teams/es/index.html nota-de-tast/index.html nota-de-tast/es/index.html legal.html 404.html"
 
 echo "Pre-publish checks"
 
